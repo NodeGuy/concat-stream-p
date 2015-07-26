@@ -2,6 +2,10 @@
 
 [concat-stream](https://github.com/maxogden/concat-stream) is [commitment-phobic](https://github.com/maxogden/concat-stream/pull/40) so I made a promise interface wrapper which accepts all of concat-stream's options.  See [its documentation](https://github.com/NodeGuy/concat-stream/blob/master/readme.md) first.
 
+## Installation
+
+`npm install concat-stream-p`
+
 ## Example
 
 ```JavaScript
@@ -23,13 +27,13 @@ function handleError(err) {
 }
 ```
 
-## methods
+## Interface
 
 ```js
 var concat = require('concat-stream-p')
 ```
 
-### var writable = concat(opts={})
+### concat(options = {})
 
-Return a `writable` stream that's also a promise of all of the data that
+Returns a `stream.Writable` that's also a promise of all of the data that
 was written to the stream.
